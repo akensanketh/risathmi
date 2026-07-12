@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Risathmi Rithumini! 🎂</title>
+    <meta name="description" content="A special birthday celebration website for Risathmi Rithumini. Leave your wishes and celebrate together!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Elements Container -->
+    <div class="floating-elements" id="floatingElements"></div>
+    
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Music Toggle -->
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+        <span class="music-icon">🎵</span>
+        <span class="music-status">OFF</span>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="sparkle-wrapper">
+                <span class="sparkle">✨</span>
+                <h2 class="hero-subtitle">Happy Birthday</h2>
+                <span class="sparkle">✨</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="name-letter" style="--delay: 0">R</span><span class="name-letter" style="--delay: 1">i</span><span class="name-letter" style="--delay: 2">s</span><span class="name-letter" style="--delay: 3">a</span><span class="name-letter" style="--delay: 4">t</span><span class="name-letter" style="--delay: 5">h</span><span class="name-letter" style="--delay: 6">m</span><span class="name-letter" style="--delay: 7">i</span>
+                <span class="name-break"></span>
+                <span class="name-letter" style="--delay: 9">R</span><span class="name-letter" style="--delay: 10">i</span><span class="name-letter" style="--delay: 11">t</span><span class="name-letter" style="--delay: 12">h</span><span class="name-letter" style="--delay: 13">u</span><span class="name-letter" style="--delay: 14">m</span><span class="name-letter" style="--delay: 15">i</span><span class="name-letter" style="--delay: 16">n</span><span class="name-letter" style="--delay: 17">i</span>
+            </h1>
+            <p class="hero-message">Wishing you a day filled with love, laughter, and all the happiness in the world! 🎂</p>
+            <div class="cake-emoji">🎂</div>
+            <a href="#gallery" class="scroll-cta">
+                <span>Scroll to celebrate</span>
+                <div class="scroll-arrow">↓</div>
+            </a>
+        </div>
+        <div class="hero-balloons">
+            <div class="balloon balloon-1">🎈</div>
+            <div class="balloon balloon-2">🎈</div>
+            <div class="balloon balloon-3">🎈</div>
+            <div class="balloon balloon-4">🎈</div>
+            <div class="balloon balloon-5">🎈</div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section" id="countdown">
+        <h2 class="section-title">
+            <span class="title-emoji">⏰</span>
+            <span id="countdownTitle">Countdown to the Big Day!</span>
+            <span class="title-emoji">⏰</span>
+        </h2>
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <h2 class="section-title">
+            <span class="title-emoji">📸</span>
+            Memories Together
+            <span class="title-emoji">📸</span>
+        </h2>
+        <p class="section-subtitle">Every photo tells a story of joy and friendship</p>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-item-1">
+                <div class="gallery-placeholder">
+                    <span class="placeholder-icon">📷</span>
+                    <span class="placeholder-text">Photo 1</span>
+                </div>
+                <div class="gallery-overlay">
+                    <span></span>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item-2">
+                <div class="gallery-placeholder">
+                    <span class="placeholder-icon">📷</span>
+                    <span class="placeholder-text">Photo 2</span>
+                </div>
+                <div class="gallery-overlay">
+                    <span></span>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item-3">
+                <div class="gallery-placeholder">
+                    <span class="placeholder-icon">📷</span>
+                    <span class="placeholder-text">Photo 3</span>
+                </div>
+                <div class="gallery-overlay">
+                    <span></span>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item-4">
+                <div class="gallery-placeholder">
+                    <span class="placeholder-icon">📷</span>
+                    <span class="placeholder-text">Photo 4</span>
+                </div>
+                <div class="gallery-overlay">
+                    <span></span>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item-5">
+                <div class="gallery-placeholder">
+                    <span class="placeholder-icon">📷</span>
+                    <span class="placeholder-text">Photo 5</span>
+                </div>
+                <div class="gallery-overlay">
+                    <span></span>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item-6">
+                <div class="gallery-placeholder">
+                    <span class="placeholder-icon">📷</span>
+                    <span class="placeholder-text">Photo 6</span>
+                </div>
+                <div class="gallery-overlay">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section class="wishes-section" id="wishes">
+        <h2 class="section-title">
+            <span class="title-emoji">💌</span>
+            Leave Your Wishes
+            <span class="title-emoji">💌</span>
+        </h2>
+        <p class="section-subtitle">Write something special for Risathmi!</p>
+        
+        <form class="wish-form" id="wishForm">
+            <div class="form-group">
+                <input type="text" id="wishName" placeholder="Your name" required class="form-input">
+            </div>
+            <div class="form-group">
+                <textarea id="wishMessage" placeholder="Write your birthday wishes here... 🎂" required class="form-textarea" rows="4"></textarea>
+            </div>
+            <button type="submit" class="wish-submit" id="submitWish">
+                <span>Send Wishes</span>
+                <span class="btn-emoji">🎉</span>
+            </button>
+        </form>
+
+        <div class="wishes-wall" id="wishesWall">
+            <div class="wish-card" style="--hue: 340">
+                <div class="wish-card-header">
+                    <span class="wish-author">..</span>
+                    <span class="wish-emoji">-</span>
+                </div>
+                <p class="wish-text">.....</p>
+            </div>
+            <div class="wish-card" style="--hue: 200">
+                <div class="wish-card-header">
+                    <span class="wish-author">..</span>
+                    <span class="wish-emoji">-</span>
+                </div>
+                <p class="wish-text">.....</p>
+            </div>
+            <div class="wish-card" style="--hue: 120">
+                <div class="wish-card-header">
+                    <span class="wish-author">..</span>
+                    <span class="wish-emoji">-</span>
+                </div>
+                <p class="wish-text">.....</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-cake">🎂</div>
+            <p class="footer-message">Made For Risathmi Rithumini</p>
+            <p class="footer-year">July 15, 2026</p>
+            <div class="footer-emojis">🎈🎉🎊🎁🎂🎈🎉🎊🎁🎂</div>
+        </div>
+    </footer>
+
+    <!-- Audio Element (using a simple tone since we can't include actual music files) -->
+    <audio id="bgMusic" loop>
+        <source src="happy-birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
