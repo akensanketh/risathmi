@@ -113,7 +113,7 @@ class ConfettiSystem {
 // =============================================
 function createFloatingEmojis() {
     const container = document.getElementById('floatingElements');
-    const emojis = ['🎈', '🎉', '🎊', '🎁', '⭐', '🌟', '✨', '💖', '🎂', '🧁', '🍰', '🎀', '💝', '🦋'];
+    const emojis = ['🎈', '🎉', '🎊', '💝', '💖', '⭐', '🌟', '✨', '🎀'];
 
     function addEmoji() {
         const emoji = document.createElement('span');
@@ -138,6 +138,33 @@ function createFloatingEmojis() {
 }
 
 // =============================================
+// CHEERS BUBBLES ANIMATION
+// =============================================
+function initCheersBubbles() {
+    const container = document.getElementById('cheersBubbles');
+    if (!container) return;
+
+    function createBubble() {
+        const bubble = document.createElement('div');
+        bubble.classList.add('cheers-bubble');
+        const size = Math.random() * 40 + 10;
+        bubble.style.width = size + 'px';
+        bubble.style.height = size + 'px';
+        bubble.style.left = Math.random() * 100 + '%';
+        bubble.style.bottom = '-' + size + 'px';
+        bubble.style.animationDuration = (Math.random() * 6 + 5) + 's';
+        bubble.style.animationDelay = Math.random() * 3 + 's';
+        container.appendChild(bubble);
+        bubble.addEventListener('animationend', () => bubble.remove());
+    }
+
+    for (let i = 0; i < 10; i++) {
+        setTimeout(() => createBubble(), i * 400);
+    }
+    setInterval(createBubble, 1200);
+}
+
+// =============================================
 // COUNTDOWN TIMER
 // =============================================
 function initCountdown() {
@@ -146,7 +173,7 @@ function initCountdown() {
 
     // Birthday: July 15
     let birthday = new Date(currentYear, 6, 15, 0, 0, 0); // Month is 0-indexed
-    
+
     // If birthday has passed this year, set for next year
     if (now > new Date(currentYear, 6, 15, 23, 59, 59)) {
         birthday = new Date(currentYear + 1, 6, 15, 0, 0, 0);
@@ -193,7 +220,7 @@ function initCountdown() {
 // =============================================
 
 // ⚠️  PASTE YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL BELOW  ⚠️
-const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQzkll1aupBvogeqwpc4M484YDVttPt2hiAq1l_o7JnnoGjw790t73YVOrsQLHw89IfQ/exec';
 
 function initWishes() {
     const form = document.getElementById('wishForm');
@@ -202,7 +229,7 @@ function initWishes() {
     const messageInput = document.getElementById('wishMessage');
     const submitBtn = document.getElementById('submitWish');
 
-    const emojis = ['🎂', '🎈', '🎉', '🎊', '🎁', '💝', '💖', '⭐', '🌟', '✨', '🧁', '🎀'];
+    const emojis = ['🎈', '🎉', '🎊', '💝', '💖', '⭐', '🌟', '✨', '🎀'];
     const hues = [340, 200, 120, 40, 280, 160, 20, 300, 60, 220];
 
     // ---------- Fetch existing wishes from Google Sheets ----------
@@ -397,14 +424,14 @@ function initMusic() {
 // SCROLL REVEAL ANIMATIONS
 // =============================================
 function initScrollReveal() {
-    const sections = document.querySelectorAll('.countdown-section, .gallery-section, .wishes-section');
+    const sections = document.querySelectorAll('.countdown-section, .cheers-section, .gallery-section, .wishes-section');
     sections.forEach(section => section.classList.add('reveal'));
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                
+
                 // Trigger confetti when gallery comes into view
                 if (entry.target.classList.contains('gallery-section')) {
                     setTimeout(() => confetti.rain(1500), 500);
@@ -463,11 +490,12 @@ let confetti;
 
 document.addEventListener('DOMContentLoaded', () => {
     confetti = new ConfettiSystem(document.getElementById('confettiCanvas'));
-    
+
     // Initial confetti celebration
     setTimeout(() => confetti.rain(2000), 1000);
-    
+
     createFloatingEmojis();
+    initCheersBubbles();
     initCountdown();
     initWishes();
     initMusic();

@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Risathmi Rithumini! 🎂</title>
-    <meta name="description" content="A special birthday celebration website for Risathmi Rithumini. Leave your wishes and celebrate together!">
+    <title>Happy Birthday Risathmi Rithumini!</title>
+    <meta name="description"
+        content="A special birthday celebration website for Risathmi Rithumini. Leave your wishes and celebrate together!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Floating Elements Container -->
     <div class="floating-elements" id="floatingElements"></div>
-    
+
     <!-- Confetti Canvas -->
     <canvas id="confettiCanvas"></canvas>
 
@@ -25,39 +30,77 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="sparkle-wrapper">
-                <span class="sparkle">✨</span>
-                <h2 class="hero-subtitle">Happy Birthday</h2>
-                <span class="sparkle">✨</span>
-            </div>
-            <h1 class="hero-title">
-                <span class="name-letter" style="--delay: 0">R</span><span class="name-letter" style="--delay: 1">i</span><span class="name-letter" style="--delay: 2">s</span><span class="name-letter" style="--delay: 3">a</span><span class="name-letter" style="--delay: 4">t</span><span class="name-letter" style="--delay: 5">h</span><span class="name-letter" style="--delay: 6">m</span><span class="name-letter" style="--delay: 7">i</span>
-                <span class="name-break"></span>
-                <span class="name-letter" style="--delay: 9">R</span><span class="name-letter" style="--delay: 10">i</span><span class="name-letter" style="--delay: 11">t</span><span class="name-letter" style="--delay: 12">h</span><span class="name-letter" style="--delay: 13">u</span><span class="name-letter" style="--delay: 14">m</span><span class="name-letter" style="--delay: 15">i</span><span class="name-letter" style="--delay: 16">n</span><span class="name-letter" style="--delay: 17">i</span>
-            </h1>
-            <p class="hero-message">Wishing you a day filled with love, laughter, and all the happiness in the world! 🎂</p>
-            <div class="cake-emoji">🎂</div>
-            <a href="#gallery" class="scroll-cta">
-                <span>Scroll to celebrate</span>
-                <div class="scroll-arrow">↓</div>
-            </a>
+
+        <!-- Animated aurora blobs -->
+        <div class="hero-aurora">
+            <div class="aurora-blob aurora-blob-1"></div>
+            <div class="aurora-blob aurora-blob-2"></div>
+            <div class="aurora-blob aurora-blob-3"></div>
         </div>
+
+        <div class="hero-inner">
+
+            <!-- Photo frame side -->
+            <div class="hero-photo-side">
+                <div class="hero-photo-wrapper">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-photo-frame">
+                        <img src="risathmi.jpeg" alt="Risathmi Rithumini" class="hero-photo-img">
+                    </div>
+                    <div class="age-badge">17</div>
+                </div>
+            </div>
+
+            <!-- Text content side -->
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <h2 class="hero-subtitle">Happy Birthday</h2>
+                    <span class="hero-badge-dot"></span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="name-letter" style="--delay: 0">R</span><span class="name-letter"
+                        style="--delay: 1">i</span><span class="name-letter" style="--delay: 2">s</span><span
+                        class="name-letter" style="--delay: 3">a</span><span class="name-letter"
+                        style="--delay: 4">t</span><span class="name-letter" style="--delay: 5">h</span><span
+                        class="name-letter" style="--delay: 6">m</span><span class="name-letter"
+                        style="--delay: 7">i</span>
+                    <span class="name-break"></span>
+                    <span class="name-letter" style="--delay: 9">R</span><span class="name-letter"
+                        style="--delay: 10">i</span><span class="name-letter" style="--delay: 11">t</span><span
+                        class="name-letter" style="--delay: 12">h</span><span class="name-letter"
+                        style="--delay: 13">u</span><span class="name-letter" style="--delay: 14">m</span><span
+                        class="name-letter" style="--delay: 15">i</span><span class="name-letter"
+                        style="--delay: 16">n</span><span class="name-letter" style="--delay: 17">i</span>
+                </h1>
+                <p class="hero-message">Wishing you a day filled with love, laughter, and all the happiness in the
+                    world!</p>
+                <div class="hero-cta-row">
+                    <div class="cake-emoji">🎂</div>
+                    <a href="#cheers" class="scroll-cta">
+                        <span>Scroll to celebrate</span>
+                        <div class="scroll-arrow">↓</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Balloons -->
         <div class="hero-balloons">
             <div class="balloon balloon-1">🎈</div>
             <div class="balloon balloon-2">🎈</div>
             <div class="balloon balloon-3">🎈</div>
-            <div class="balloon balloon-4">🎈</div>
-            <div class="balloon balloon-5">🎈</div>
         </div>
+
     </section>
 
     <!-- Countdown Section -->
+
     <section class="countdown-section" id="countdown">
         <h2 class="section-title">
-            <span class="title-emoji">⏰</span>
             <span id="countdownTitle">Countdown to the Big Day!</span>
-            <span class="title-emoji">⏰</span>
         </h2>
         <div class="countdown-container">
             <div class="countdown-item">
@@ -80,6 +123,28 @@
                 <div class="countdown-label">Seconds</div>
             </div>
         </div>
+    </section>
+
+    <!-- Cheers to 17 Years Section -->
+    <section class="cheers-section" id="cheers">
+        <div class="cheers-content">
+            <div class="cheers-glasses">🥂</div>
+            <h2 class="cheers-title">
+                <span class="cheers-word">Cheers</span>
+                <span class="cheers-word">to</span>
+            </h2>
+            <div class="cheers-number">
+                <span class="num-digit" style="--d: 0">1</span><span class="num-digit" style="--d: 1">7</span>
+            </div>
+            <p class="cheers-years-label">Y E A R S</p>
+            <p class="cheers-tagline">of joy, laughter, and countless memories 💖</p>
+            <div class="cheers-divider">
+                <span>✦</span><span>✦</span><span>✦</span>
+            </div>
+            <p class="cheers-quote">"Here's to the girl who makes every moment brighter — may your 17th year be your
+                most magical one yet!"</p>
+        </div>
+        <div class="cheers-bubbles" id="cheersBubbles"></div>
     </section>
 
     <!-- Photo Gallery Section -->
@@ -156,13 +221,14 @@
             <span class="title-emoji">💌</span>
         </h2>
         <p class="section-subtitle">Write something special for Risathmi!</p>
-        
+
         <form class="wish-form" id="wishForm">
             <div class="form-group">
                 <input type="text" id="wishName" placeholder="Your name" required class="form-input">
             </div>
             <div class="form-group">
-                <textarea id="wishMessage" placeholder="Write your birthday wishes here... 🎂" required class="form-textarea" rows="4"></textarea>
+                <textarea id="wishMessage" placeholder="Write your birthday wishes here..." required
+                    class="form-textarea" rows="4"></textarea>
             </div>
             <button type="submit" class="wish-submit" id="submitWish">
                 <span>Send Wishes</span>
@@ -201,7 +267,6 @@
             <div class="footer-cake">🎂</div>
             <p class="footer-message">Made For Risathmi Rithumini</p>
             <p class="footer-year">July 15, 2026</p>
-            <div class="footer-emojis">🎈🎉🎊🎁🎂🎈🎉🎊🎁🎂</div>
         </div>
     </footer>
 
@@ -212,4 +277,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
