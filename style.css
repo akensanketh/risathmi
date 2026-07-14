@@ -686,100 +686,6 @@ body {
     font-weight: 300;
 }
 
-/* ---------- Countdown Section ---------- */
-.countdown-section {
-    padding: 5rem 2rem;
-    position: relative;
-}
-
-.countdown-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--clr-primary), transparent);
-}
-
-.countdown-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.countdown-item {
-    background: var(--clr-surface);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--clr-border);
-    border-radius: var(--radius-lg);
-    padding: 1.5rem 2rem;
-    min-width: 120px;
-    text-align: center;
-    transition: all var(--transition-normal);
-    position: relative;
-    overflow: hidden;
-}
-
-.countdown-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary));
-}
-
-.countdown-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-glow);
-    border-color: var(--clr-primary);
-}
-
-.countdown-number {
-    font-family: var(--font-body);
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--clr-accent-yellow), var(--clr-accent-orange));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 1.2;
-}
-
-.countdown-label {
-    font-size: 0.85rem;
-    color: var(--clr-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 0.5rem;
-}
-
-.countdown-separator {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--clr-primary);
-    animation: pulse 1s ease-in-out infinite;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.3;
-    }
-}
-
 /* ---------- Cheers to 17 Years Section ---------- */
 .cheers-section {
     padding: 6rem 2rem;
@@ -1360,19 +1266,6 @@ body {
     .gallery-item-6,
     .gallery-item-14 { grid-column: span 1; }
 
-    .countdown-container {
-        gap: 0.8rem;
-    }
-
-    .countdown-item {
-        min-width: 80px;
-        padding: 1rem 1.2rem;
-    }
-
-    .countdown-separator {
-        font-size: 1.5rem;
-    }
-
     .balloon {
         font-size: 2rem;
     }
@@ -1408,15 +1301,6 @@ body {
 @media (max-width: 480px) {
     .gallery-grid {
         columns: 2;
-    }
-
-    .countdown-item {
-        min-width: 65px;
-        padding: 0.8rem;
-    }
-
-    .countdown-number {
-        font-size: 1.8rem;
     }
 
     .hero-balloons .balloon:nth-child(n+4) {

@@ -164,56 +164,6 @@ function initCheersBubbles() {
     setInterval(createBubble, 1200);
 }
 
-// =============================================
-// COUNTDOWN TIMER
-// =============================================
-function initCountdown() {
-    const now = new Date();
-    const currentYear = now.getFullYear();
-
-    // Birthday: July 15
-    let birthday = new Date(currentYear, 6, 15, 0, 0, 0); // Month is 0-indexed
-
-    // If birthday has passed this year, set for next year
-    if (now > new Date(currentYear, 6, 15, 23, 59, 59)) {
-        birthday = new Date(currentYear + 1, 6, 15, 0, 0, 0);
-    }
-
-    const titleEl = document.getElementById('countdownTitle');
-
-    function update() {
-        const now = new Date();
-        const todayStr = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
-        const bdayStr = `${birthday.getFullYear()}-6-15`;
-
-        // Check if today IS the birthday
-        if (now.getMonth() === 6 && now.getDate() === 15) {
-            titleEl.textContent = "🎉 It's Your Birthday Today! 🎉";
-            document.body.classList.add('birthday-today');
-            document.getElementById('days').textContent = '🎂';
-            document.getElementById('hours').textContent = '🎈';
-            document.getElementById('minutes').textContent = '🎉';
-            document.getElementById('seconds').textContent = '🎁';
-            document.querySelectorAll('.countdown-label').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.countdown-separator').forEach(el => el.style.display = 'none');
-            return;
-        }
-
-        const diff = birthday - now;
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        document.getElementById('days').textContent = String(days).padStart(2, '0');
-        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-    }
-
-    update();
-    setInterval(update, 1000);
-}
 
 // =============================================
 // WISHES SYSTEM  (Google Sheets Backend)
@@ -496,7 +446,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createFloatingEmojis();
     initCheersBubbles();
-    initCountdown();
     initWishes();
     initMusic();
     initScrollReveal();
